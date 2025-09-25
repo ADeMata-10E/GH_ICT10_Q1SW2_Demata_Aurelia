@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pyscript.net/releases/2025.7.3/core.css">
+    <script type="module" src="https://pyscript.net/releases/2025.7.3/core.js"></script>
+    <title>Skills Test</title>
+
+    <style>
+        body {
+            font-family: monospace;
+            margin: 20px;
+            background-color: rgb(196, 71, 150);
+        }
+        form {
+            max-width: 400px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #fb0404;
+            border-radius: 5px;
+            background-color: #000000;
+            color: white;
+            font-family: monospace;
+        }
+        input {
+            width: 80%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #dd2e6c;
+            border-radius: 30px;
+            /*The checkboxes are misaligned, but when I tried troubleshooting they broke*/
+        }
+
+        select{
+            width: 95%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #e573af;
+            border-radius: 30px;
+        }
+
+        button {
+            background-color: #d11e1e;
+            color: rgb(0, 0, 0);
+            border: 3px solid #dd2e6c;
+            cursor: pointer;
+            max-width: 500%;
+        }
+        button:hover {
+            background-color: #c35555;
+            color: rgb(0, 0, 0)
+        }
+
+        #area {
+            border: 2px solid #dd2e6c;
+            border-radius: 5px;
+            padding: 10px;
+            margin-top: 20px;
+            background-color: #ffe6f0;
+            min-height: 50px;
+            white-space: pre-wrap; /* Preserve whitespace and line breaks */
+        }
+
+        .box {
+            max-width: 400px;
+            margin: auto;
+            background-color: rgb(222, 99, 144);
+            padding-left: 50px;
+            padding-right: 50px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            border-radius: 5px;
+            border:#f4bdd0 3px solid;
+            
+        }
+
+        #output {
+            white-space: pre-wrap; /*To preserve the space in the order output*/
+            font-family: monospace;
+        }
+
+        </style>
+</head>
+<body>
+    <form>
+        <h2 style="text-align: center;">Menu</h2>
+        <label>Fried squid</label>
+        <input type="checkbox" id="menu1" value="150.50"><br>
+        <label>Lollipops</label>
+        <input type="checkbox" id="menu2" value="130.4"><br>
+        <label>Cupcakes</label>
+        <input type="checkbox" id="menu3" value="49.50"><br>
+        <label>Cotton candy</label>
+        <input type="checkbox" id="menu4" value="89.99"><br>
+    </form>
+
+<br>
+     <form>
+        <h2 style="text-align: center;">Customer Details</h2>
+        <input type="text" id="firstname" placeholder="Enter your name"><br>
+        <input type="text" id="address" placeholder="Enter your address"><br>
+        <input type="number" id="phonenumber" placeholder="Enter your contact number"><br>
+        <input type="button" class="hold" value="Order Now" py-click="ordering_form">
+     </form>
+
+    <!---Assume outside python script-->
+<br>
+    <div class="box">     
+         <div id="output"></div>
+    </div>
+
+    <py-script src="main.py"></py-script>
+</body>
+</html>
