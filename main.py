@@ -12,6 +12,7 @@ def ordering_form(e):
     customeraddress = document.getElementById('address').value
 
     document.getElementById('output').innerText = ''
+    # Anti repeating output code from DS2
 
     total = (float(item1.value) * item1.checked + 
              float(item2.value) *  item2.checked + float(item3.value) * item3.checked + 
@@ -24,7 +25,8 @@ def ordering_form(e):
     Address: {customeraddress}
 
     """
-
+# Also from DS2: the multiline string
+    
     
     display(customersummary, target='output')
     display(f'The total is ₱{total}', target='output')
